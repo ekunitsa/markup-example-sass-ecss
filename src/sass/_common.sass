@@ -1,0 +1,109 @@
+$mainClass: '.gst-base'
+
+body
+    font-family: $font-openSans
+    color: $color-black
+
+*
+    box-sizing: border-box
+    outline: none
+
+a
+    transition: $transition-global
+
+#{$mainClass}
+    &_wrapper
+        margin: 0 auto
+        max-width: 1170px
+        padding: 0 $spacer-15
+        position: relative
+        width: 100%
+
+    &_colorRed
+        color: $color-red
+
+    &_colorRedBlack
+        color: $color-dark-red
+
+    &_colorBlack
+        color: $color-black
+
+    &_colorWhite
+        color: $color-white
+
+    &_colorGray
+        color: $color-gray
+
+    &_weightSemiBold
+        font-weight: $fw-semi-bold
+
+    &_globalShadow
+        background: $color-black
+        display: none
+        height: 100%
+        left: 0
+        opacity: 0.8
+        position: fixed
+        top: 0
+        width: 100%
+        z-index: 1001
+
+    &_globalTitle
+        font-size: 48px
+        font-weight: $fw-extra-bold
+        line-height: 55px
+        margin-bottom: $spacer-50
+        margin-top: 0
+        padding-bottom: $spacer-25
+        position: relative
+
+        @media all and (max-width: $breakpoint-tablet)
+            font-size: 32px
+            line-height: 37px
+            margin-bottom: $spacer-40
+
+        @media all and (max-width: $breakpoint-phone)
+            br
+                display: none
+
+        &::after
+            background-color: $color-red
+            bottom: 0
+            content: ''
+            height: 6px
+            left: 0
+            position: absolute
+            width: 70px
+
+            @media all and (max-width: $breakpoint-tablet)
+                width: 55px
+
+        &-center
+            text-align: center
+
+            &::after
+                margin-left: auto
+                margin-right: auto
+                right: 0
+
+    &_globalDesc
+        font-size: 28px
+        line-height: 32px
+        margin-bottom: $spacer-50
+
+        @media all and (max-width: $breakpoint-tablet)
+            font-size: 20px
+            line-height: 23px
+            margin-bottom: $spacer-40
+
+.svg-form
+    *
+        transition: $transition-global
+
+// plugins
+.mfp
+    &-container
+        padding: $spacer-15
+
+    &-wrap
+        overflow: hidden auto

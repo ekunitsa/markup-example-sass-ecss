@@ -1,0 +1,23 @@
+$mainClass: '.gst-utp'
+
+#{$mainClass}
+    padding-top: $spacer-60
+    padding-bottom: $spacer-40
+    overflow: hidden
+
+    @media all and (max-width: $breakpoint-phone)
+        padding-top: $spacer-40
+
+    &_list
+        display: flex
+        justify-content: space-between
+        flex-wrap: wrap
+        margin-left: -$spacer-20
+        margin-right: -$spacer-20
+
+        @media all and (max-width: $breakpoint-tablet)
+            margin-left: -$spacer-10
+            margin-right: -$spacer-10
+
+        @media all and (max-width: $breakpoint-phone)
+            margin-bottom: -$spacer-15

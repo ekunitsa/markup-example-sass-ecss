@@ -1,0 +1,104 @@
+$mainClass: '.gst-form'
+
+#{$mainClass}
+    padding: $spacer-20
+    background: $color-white
+    box-shadow: $box-shadow
+    border-radius: 10px
+    max-width: 490px
+    text-align: center
+
+    @media all and (max-width: $breakpoint-tablet)
+        max-width: 420px
+
+    @media all and (max-width: $breakpoint-phone)
+        max-width: calc(100% + 30px)
+        border-radius: 0
+        box-shadow: none
+        position: relative
+        z-index: 10
+        padding-bottom: 0
+        margin-left: -$spacer-15
+        margin-right: -$spacer-15
+
+    &_title
+        font-weight: $fw-extra-bold
+        font-size: 24px
+        line-height: 137%
+        color: $color-red
+        margin-bottom: $spacer-05
+
+        @media all and (max-width: $breakpoint-tablet)
+            font-size: 20px
+
+    &_desc
+        font-weight: $fw-semi-bold
+        font-size: 18px
+        line-height: 137%
+        margin-bottom: $spacer-05
+
+        @media all and (max-width: $breakpoint-tablet)
+            font-size: 16px
+
+    &_date
+        font-size: 16px
+        line-height: 137%
+        margin-bottom: $spacer-20
+
+        @media all and (max-width: $breakpoint-tablet)
+            font-size: 14px
+
+    &_inputs
+        display: flex
+        width: 100%
+
+        @media all and (max-width: $breakpoint-phone)
+            flex-direction: column
+            padding-left: $spacer-15
+            padding-right: $spacer-15
+
+    &_inputSubmit
+        background-color: $color-red
+        border-radius: 0px 5px 5px 0px
+        border: 0px
+        padding: $spacer-20 $spacer-35
+        font-weight: $fw-bold
+        font-size: 15px
+        line-height: 100%
+        color: $color-white
+        height: 54px
+        transition: $transition-global
+
+        @media all and (max-width: $breakpoint-tablet)
+            font-size: 13px
+
+        @media all and (max-width: $breakpoint-phone)
+            border-radius: 5px
+            height: 48px
+            padding: $spacer-15 $spacer-20
+
+        &:hover
+            background-color: $color-dark-red
+            cursor: pointer
+
+    &_inputText
+        height: 54px
+        padding: $spacer-20 $spacer-25
+        background: $color-white
+        border: 1px solid $color-red
+        box-sizing: border-box
+        border-radius: 5px 0px 0px 5px
+        font-size: 15px
+        line-height: 100%
+        width: 100%
+
+        @media all and (max-width: $breakpoint-tablet)
+            font-size: 13px
+            padding: $spacer-20
+
+        @media all and (max-width: $breakpoint-phone)
+            margin-bottom: $spacer-10
+            background: $color-gray-f9
+            border-radius: 5px
+            height: 48px
+            padding: $spacer-15 $spacer-20

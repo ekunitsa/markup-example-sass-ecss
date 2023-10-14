@@ -1,0 +1,42 @@
+$mainClass: '.gst-utpItem'
+
+#{$mainClass}
+    background-color: $color-white
+    box-shadow: $box-shadow
+    border-radius: 10px
+    padding: $spacer-30 $spacer-20
+    width: calc(25% - 40px)
+    margin-left: $spacer-20
+    margin-right: $spacer-20
+    text-align: center
+    font-size: 20px
+    line-height: 137%
+    padding-top: $spacer-100
+    background-repeat: no-repeat
+    background-position: center 30px
+
+    @media all and (max-width: $breakpoint-tablet)
+        font-size: 16px
+        background-size: 44px 44px
+        padding-top: $spacer-90
+        width: calc(25% - 15px)
+        margin-left: $spacer-10
+        margin-right: $spacer-10
+
+    @media all and (max-width: $breakpoint-phone)
+        width: calc(50% - 15px)
+        margin-bottom: $spacer-15
+        padding-left: $spacer-10
+        parring-right: $spacer-10
+
+    &Icon1
+        background-image: url(../../img/utp/i1.svg)
+
+    &Icon2
+        background-image: url(../../img/utp/i2.svg)
+
+    &Icon3
+        background-image: url(../../img/utp/i3.svg)
+
+    &Icon4
+        background-image: url(../../img/utp/i4.svg)

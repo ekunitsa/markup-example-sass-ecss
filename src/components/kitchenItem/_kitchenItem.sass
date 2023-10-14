@@ -1,0 +1,112 @@
+$mainClass: '.gst-kitchenItem'
+
+#{$mainClass}
+    width: 33.332%
+    border: 22px solid $color-transparent
+
+    @media all and (max-width: $breakpoint-tablet)
+        border: 15px solid $color-transparent
+        width: 50%
+
+    @media all and (max-width: $breakpoint-phone)
+        border: 0px
+        margin-bottom: $spacer-30
+        width: 100%
+
+    &:last-child
+        @media all and (max-width: $breakpoint-tablet)
+            margin-right: auto
+
+        @media all and (max-width: $breakpoint-phone)
+            margin-bottom: 0
+
+    &_inner
+        background: $color-white
+        box-shadow: $box-shadow
+        border-radius: 15px
+        width: 100%
+        height: 100%
+        overflow: hidden
+
+    &_imgSrc
+        width: 100%
+        display: block
+
+    &_container
+        padding: $spacer-25 $spacer-20
+
+    &_btn
+        background-color: $color-red
+        color: $color-white
+        font-weight: $fw-bold
+        font-size: 14px
+        border-radius: 5px
+        padding: $spacer-20
+        text-decoration: none
+        white-space: nowrap
+        display: inline-block
+        width: 100%
+        max-width: 200px
+        border: 1px solid $color-red
+        text-align: center
+
+        &:hover
+            background-color: $color-dark-red
+
+    &_btnInvert
+        background-color: $color-transparent
+        color: $color-black
+        border: 1px solid $color-red
+        font-weight: $fw-bold
+        font-size: 14px
+        border-radius: 5px
+        padding: $spacer-20
+        text-decoration: none
+        white-space: nowrap
+        display: inline-block
+        width: 100%
+        max-width: 200px
+        text-align: center
+        margin-bottom: $spacer-15
+
+        &:hover
+            background-color: $color-dark-red
+            color: $color-white
+
+    &_oneline
+        margin-bottom: $spacer-15
+
+    &_onelineCost
+        margin-top: $spacer-30
+        white-space: nowrap
+
+    &_name
+        font-size: 16px
+        line-height: 19px
+        color: $color-gray
+
+    &_value
+        font-weight: $fw-semi-bold
+        font-size: 16px
+        line-height: 19px
+
+    &_priceOld
+        font-weight: $fw-semi-bold
+        font-size: 16px
+        line-height: 19px
+        white-space: nowrap
+
+        span
+            text-decoration: line-through
+
+    &_priceNew
+        white-space: nowrap
+        font-weight: $fw-bold
+        font-size: 20px
+        line-height: 23px
+        color: $color-red
+
+    &_title
+        br
+            @media all and (max-width: $breakpoint-phone)
+                display: none

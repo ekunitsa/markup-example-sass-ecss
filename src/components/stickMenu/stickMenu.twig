@@ -1,0 +1,16 @@
+<div class="gst-stickMenu js-stickMenu">
+    <div class="gst-stickMenu_wrapper">
+        <div class="gst-base_wrapper">
+            <div class="gst-stickMenu_flex">
+                <div class="gst-stickMenu_logo">
+                    <img src="./img/header/logo.svg" class="gst-stickMenu_logoImg" alt="Logo">
+                </div>
+                <div class="gst-stickMenu_list">
+                    {% for item in menu %}
+                        <a href="{{ item.link }}" class="gst-stickMenu_link js-menuItem">{{ item.text }}</a>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

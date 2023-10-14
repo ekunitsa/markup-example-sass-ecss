@@ -1,0 +1,26 @@
+<div class="gst-whyItem">
+	<div class="gst-whyItem_img">
+		<picture>
+			<source srcset="./img/why/img{{ loop.index }}.avif 1x, ./img/why/img{{ loop.index }}@2x.avif 2x" type="image/avif">
+			<source srcset="./img/why/img{{ loop.index }}.webp 1x, ./img/why/img{{ loop.index }}@2x.webp 2x" type="image/webp">
+			<img
+                class="gst-whyItem_imgSrc"
+                src="./img/why/img{{ loop.index }}.jpg"
+                alt="{{ item.name }}"
+                srcset="./img/why/img{{ loop.index }}.jpg 1x, ./img/why/img{{ loop.index }}@2x.jpg 2x"
+            >
+		</picture>
+
+		<a href="{{ item.link }}" class="js-modal gst-whyItem_imgLink">
+            Read more
+        </a>
+	</div>
+
+	<div class="gst-whyItem_title">
+		{{ item.title }}
+	</div>
+
+	<div class="gst-whyItem_text">
+		{{ item.text }}
+	</div>
+</div>

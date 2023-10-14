@@ -1,0 +1,26 @@
+{% set additionally = [
+    {
+        'title': 'Connecting kitchen<br> appliances',
+        'link': '#callback',
+    }, {
+        'title': 'Connecting<br> the lighting',
+        'link': '#callback',
+    }, {
+        'title': 'Plumbing<br> connection',
+        'link': '#callback',
+    },
+] %}
+
+<section class="gst-additionally">
+    <div class="gst-base_wrapper">
+        <h2 class="gst-base_globalTitle">
+            Our <span class="gst-base_colorRed">additional<br> solutions</span> for your kitchen
+        </h2>
+
+        <div class="gst-additionally_list">
+            {% for item in additionally %}
+                {% include '../../components/additionallyItem/additionallyItem.twig' %}
+            {% endfor %}
+        </div>
+    </div>
+</section>

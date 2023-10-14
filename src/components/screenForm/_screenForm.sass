@@ -1,0 +1,113 @@
+$mainClass: '.gst-screenForm'
+
+#{$mainClass}
+    background-repeat: no-repeat
+    background-position: top center
+    background-size: 1920px auto
+    position: relative
+    display: flex
+    align-items: center
+    text-align: center
+    margin-bottom: $spacer-100
+    padding: $spacer-80 0
+
+    @media all and (max-width: $breakpoint-tablet)
+        margin-bottom: $spacer-60
+        padding: $spacer-50 0
+
+    @media all and (max-width: $breakpoint-phone)
+        margin-bottom: $spacer-50
+
+    &_wrapper
+        position: relative
+        z-index: 5
+
+    &_title
+        font-weight: $fw-bold
+        font-size: 26px
+        line-height: 34px
+        margin-bottom: $spacer-25
+        max-width: 600px
+        margin-left: auto
+        margin-right: auto
+
+        @media all and (max-width: $breakpoint-tablet)
+            font-size: 20px
+            line-height: 26px
+            max-width: 400px
+
+    &_inputs
+        display: flex
+        width: 100%
+        max-width: 520px
+        margin: 0 auto
+
+        @media all and (max-width: $breakpoint-phone)
+            flex-direction: column
+            padding: 0 $spacer-20
+
+    &_inputSubmit
+        background-color: $color-red
+        border-radius: 0px 5px 5px 0px
+        border: 0px
+        padding: $spacer-20 $spacer-35
+        font-weight: $fw-bold
+        font-size: 15px
+        line-height: 100%
+        color: $color-white
+        height: 54px
+        transition: $transition-global
+
+        @media all and (max-width: $breakpoint-tablet)
+            font-size: 13px
+
+        @media all and (max-width: $breakpoint-phone)
+            border-radius: 5px
+            height: 48px
+            padding: $spacer-15 $spacer-20
+
+        &:hover
+            background-color: $color-dark-red
+            cursor: pointer
+
+    &_inputText
+        height: 54px
+        padding: $spacer-20 $spacer-25
+        background: $color-white
+        border: 1px solid $color-red
+        box-sizing: border-box
+        border-radius: 5px 0px 0px 5px
+        font-size: 15px
+        line-height: 100%
+        width: 100%
+
+        @media all and (max-width: $breakpoint-tablet)
+            font-size: 13px
+            padding: $spacer-20
+
+        @media all and (max-width: $breakpoint-phone)
+            margin-bottom: $spacer-10
+            background: $color-gray-f9
+            border-radius: 5px
+            height: 48px
+            text-align: center
+            padding: $spacer-15 $spacer-20
+
+// webp/avif optimization
+.fallback
+    #{$mainClass}
+        background-image: url(../../img/bigForm/bg.jpg)
+        @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), all and (min-width: 991px)
+            background-image: url(../../img/bigForm/bg@2x.jpg)
+
+.webp
+    #{$mainClass}
+        background-image: url(../../img/bigForm/bg.jpg?as=webp)
+        @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), all and (min-width: 991px)
+            background-image: url(../../img/bigForm/bg@2x.jpg?as=webp)
+
+.avif
+    #{$mainClass}
+        background-image: url(../../img/bigForm/bg.jpg?as=avif)
+        @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), all and (min-width: 991px)
+            background-image: url(../../img/bigForm/bg@2x.jpg?as=avif)

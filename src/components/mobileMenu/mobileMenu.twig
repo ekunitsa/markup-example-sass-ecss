@@ -1,0 +1,11 @@
+<div class="gst-mobileMenu js-mobileMenu">
+    <div class="gst-mobileMenu_closeWrapper">
+        <div class="gst-mobileMenu_close js-mobileMenuClose"></div>
+    </div>
+
+    <div class="gst-mobileMenu_list js-mobileMenu-list">
+        {% for item in menu %}
+            <a href="{{ item.link }}" class="gst-mobileMenu_item js-menuItem js-menuItemMobile">{{ item.text }}</a>
+        {% endfor %}
+    </div>
+</div>

@@ -1,0 +1,26 @@
+$mainClass: '.gst-mainMenu'
+
+#{$mainClass}
+    border-bottom: 1px solid $color-red
+    display: flex
+    justify-content: space-between
+
+    @media all and (max-width: $breakpoint-phone)
+        display: none
+
+    &_link
+        border-bottom: 3px solid $color-transparent
+        color: $color-black
+        font-size: 20px
+        line-height: 27px
+        margin-bottom: -1px
+        padding-bottom: $spacer-10
+        text-decoration: none
+        text-transform: uppercase
+
+        @media all and (max-width: $breakpoint-tablet)
+            font-size: 15px
+            line-height: 20px
+
+        &:hover, &.is-active
+            border-bottom: 3px solid $color-red

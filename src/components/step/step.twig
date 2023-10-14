@@ -1,0 +1,42 @@
+{% set steps = [
+  {
+    'title': 'Application',
+    'text': '<a href="#callback" class="js-modal">You leave a request</a> or call us <a href="tel:+81234567890" class="gst-stepItem_nowrap">+8 (123) 456-78-90</a> Our specialist will tell you in detail about the features of our kitchens, payment options and its installation.',
+  }, {
+    'title': 'Designer Consultation ',
+    'text': 'Our designers from 9:00 to 21:00 will help you find the perfect kitchen, measure, make a project and calculate the cost.			',
+  }, {
+    'title': 'Contracting',
+    'text': 'We sign the contract, give out the check, we draw up installments, we agree convenient for you time of delivery and assembly.',
+  }, {
+    'title': 'Kitchen delivery and assembly',
+    'text': 'We will bring your kitchen, assemble and install it. Work time depends on the material you choose and the list of additional work. After assembly, we clean up and take out the trash.',
+  }, {
+    'title': 'Congratulations!<br> Your kitchen is ready!',
+    'text': 'Now you can enjoy time with your family in your new kitchen.',
+  },
+] %}
+
+<section class="gst-step" data-scroll="how">
+	<div class="gst-base_wrapper">
+		<h2 class="gst-base_globalTitle">
+            5 steps to your <span class="gst-base_colorRed">perfect kitchen</span>
+		</h2>
+
+		<div class="gst-step_list">
+			{% for item in steps %}
+				{% include '../../components/stepItem/stepItem.twig' %}
+			{% endfor %}
+		</div>
+
+		<div class="gst-step_btns">
+			<a href="#cost" class="gst-step_btn js-modal">
+                Calculate the cost
+            </a>
+
+			<a href="#callback" class="gst-step_btnInvert js-modal">
+                Get the whole catalog
+            </a>
+		</div>
+	</div>
+</section>

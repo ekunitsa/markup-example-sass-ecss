@@ -1,0 +1,29 @@
+<section class="gst-mainScreen {% if second %}gst-mainScreenSecond{% endif %}">
+	<div class="gst-base_wrapper">
+		{% if second %}
+			<h2 class="gst-mainScreen_title">
+                Kitchens to order <span class="gst-mainScreen_titleSpan gst-base_colorRed">in Borderland</span>
+			</h2>
+		{% else %}
+			<h1 class="gst-mainScreen_title">
+                Kitchens to order <span class="gst-mainScreen_titleSpan gst-base_colorRed">in Borderland</span>
+			</h1>
+		{% endif %}
+
+		<div class="gst-mainScreen_list">
+			<div class="gst-mainScreen_oneItem gst-mainScreen_oneItemIcon1">
+                Price from <span class="gst-base_colorRed gst-base_weightSemiBold">19990 $</span>
+			</div>
+
+			<div class="gst-mainScreen_oneItem gst-mainScreen_oneItemIcon2">
+                We will produce from <span class="gst-base_colorRed gst-base_weightSemiBold">7 days</span>
+			</div>
+
+			<div class="gst-mainScreen_oneItem gst-mainScreen_oneItemIcon3">
+                Warranty <span class="gst-base_colorRed gst-base_weightSemiBold">2 years</span>
+			</div>
+		</div>
+
+		{% include '../../components/form/form.twig' %}
+	</div>
+</section>

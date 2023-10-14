@@ -1,0 +1,5 @@
+<div class="gst-mainMenu">
+    {% for item in menu %}
+        <a href="{{ item.link }}" class="gst-mainMenu_link js-menuItem">{{ item.text }}</a>
+    {% endfor %}
+</div>

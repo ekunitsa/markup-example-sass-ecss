@@ -1,0 +1,358 @@
+$mainClass: '.gst-modal'
+
+#{$mainClass}
+    &_wrapper
+        position: relative
+        background: $color-white
+        width: 100%
+        border-radius: 10px
+        margin: 0 auto
+
+    &_wrapperSmall
+        padding: $spacer-45
+        max-width: 490px
+        text-align: center
+        line-height: 29px
+
+        @media all and (max-width: $breakpoint-tablet)
+            padding: $spacer-40
+
+        @media all and (max-width: $breakpoint-phone)
+            padding: $spacer-40 $spacer-20
+
+    &_wrapperLarge
+        padding: $spacer-45
+        max-width: 900px
+
+        @media all and (max-width: $breakpoint-tablet)
+            padding: $spacer-40
+
+        @media all and (max-width: $breakpoint-phone)
+            padding: $spacer-40 $spacer-20
+
+    &_text
+        margin-bottom: $spacer-20
+        font-size: 22px
+
+        @media all and (max-width: $breakpoint-tablet)
+            font-size: 20px
+            line-height: 26px
+
+        @media all and (max-width: $breakpoint-phone)
+            font-size: 16px
+            line-height: 22px
+
+    &_smallFormInput
+        width: 100%
+        border: 1px solid $color-black
+        box-sizing: border-box
+        border-radius: 5px
+        padding: $spacer-15
+        text-align: center
+        height: 54px
+        margin-bottom: $spacer-10
+        font-size: 15px
+
+        @media all and (max-width: $breakpoint-phone)
+            font-size: 13px
+            height: 48px
+            padding: $spacer-15 $spacer-20
+
+    &_smallFormSubmit
+        background-color: $color-red
+        border-radius: 5px
+        border: 0px
+        padding: $spacer-20 $spacer-35
+        font-weight: $fw-bold
+        font-size: 15px
+        line-height: 100%
+        color: $color-white
+        height: 54px
+        transition: $transition-global
+        width: 100%
+
+        @media all and (max-width: $breakpoint-phone)
+            font-size: 13px
+            height: 48px
+            padding: $spacer-15 $spacer-20
+
+        &:hover
+            background-color: $color-dark-red
+            cursor: pointer
+
+    &_title
+        font-weight: $fw-extra-bold
+        font-size: 32px
+        line-height: 37px
+        margin-bottom: $spacer-40
+
+    &_box
+        background: $color-white
+        border: 1px solid $color-gray-e8
+        box-sizing: border-box
+        box-shadow: $box-shadow
+        border-radius: 15px
+        margin-bottom: $spacer-30
+        padding: $spacer-25
+
+        @media all and (max-width: $breakpoint-phone)
+            padding: $spacer-15
+
+    &_boxTitle
+        font-weight: $fw-semi-bold
+        font-size: 16px
+        line-height: 100%
+        margin-bottom: $spacer-25
+
+    &_boxStyleList
+        display: flex
+        justify-content: space-between
+
+        @media all and (max-width: $breakpoint-tablet)
+            justify-content: flex-start
+
+        @media all and (max-width: $breakpoint-phone)
+            flex-wrap: wrap
+            margin-bottom: -$spacer-15
+            justify-content: space-between
+
+    &_boxStyleImgSrc
+        width: 100%
+        max-width: 160px
+        display: block
+
+        @media all and (max-width: $breakpoint-phone)
+            max-width: 100%
+
+    &_boxStyleOneElem
+        width: 160px
+        box-shadow: $box-shadow
+        transition: $transition-global
+        border-radius: 7px
+        overflow: hidden
+        background-color: $color-white
+        display: block
+
+        @media all and (max-width: $breakpoint-tablet)
+            width: 130px
+            margin-right: $spacer-15
+
+        @media all and (max-width: $breakpoint-phone)
+            margin-right: 0
+            width: 100%
+
+        &:hover
+            background-color: $color-red
+            cursor: pointer
+
+            #{$mainClass}
+                &_boxStyleText
+                    color: white
+
+    &_boxStyleOneElemWrap
+        @media all and (max-width: $breakpoint-phone)
+            margin-bottom: $spacer-15
+            width: calc(50% - 6px)
+
+    &_boxStyleRadio
+        display: none
+
+        + label
+            border-radius: 7px
+
+        &:checked
+            + label
+                cursor: pointer
+
+                #{$mainClass}
+                    &_boxStyleOneElem
+                        background-color: $color-red
+
+                    &_boxStyleText
+                        color: white
+    &_boxStyleText
+        padding: $spacer-10
+        font-size: 14px
+        display: block
+
+    &_boxStyleImg
+        display: block
+
+    &_boxFormList
+        display: flex
+        justify-content: space-between
+
+        @media all and (max-width: $breakpoint-tablet)
+            flex-wrap: wrap
+            margin-bottom: -$spacer-30
+
+    &_boxFormText
+        font-size: 12px
+        display: block
+
+        @media all and (max-width: $breakpoint-phone)
+            padding: 0 $spacer-05
+
+    &_boxFormOneElem
+        text-align: center
+        display: block
+
+        @media all and (max-width: $breakpoint-tablet)
+            margin-bottom: $spacer-30
+
+        &:hover
+            cursor: pointer
+
+            #{$mainClass}
+                &_boxFormImg
+                    background-color: $color-red
+
+                    .svg-form *
+                        fill: white
+
+    &_boxFormOneElemWrap
+        @media all and (max-width: $breakpoint-tablet)
+            width: 33%
+
+    &_boxFormImg
+        background: $color-white
+        box-shadow: $box-shadow
+        border-radius: 50%
+        margin-bottom: $spacer-15
+        width: 70px
+        height: 70px
+        display: inline-flex
+        justify-content: center
+        align-items: center
+        transition: $transition-global
+
+        @media all and (max-width: $breakpoint-phone)
+            width: 56px
+            height: 56px
+
+    &_boxFormRadio
+        display: none
+
+        + label
+            border-radius: 7px
+
+        &:checked
+            + label
+                #{$mainClass}
+                    &_boxFormImg
+                        background-color: $color-red
+
+                        .svg-form *
+                            fill: white
+    &_boxAreaList
+        display: flex
+
+        @media all and (max-width: $breakpoint-phone)
+            flex-wrap: wrap
+            justify-content: space-between
+            margin-bottom: -$spacer-15
+
+    &_boxAreaRadio
+        display: none
+
+        &:checked
+            + label
+                #{$mainClass}
+                    &_boxAreaText
+                        background-color: $color-red
+                        color: $color-white
+
+    &_boxAreaOneElem
+        margin-right: $spacer-40
+        display: block
+
+        @media all and (max-width: $breakpoint-tablet)
+            margin-right: $spacer-20
+
+        @media all and (max-width: $breakpoint-phone)
+            margin-right: 0
+
+    &_boxAreaOneElemWrap
+        @media all and (max-width: $breakpoint-phone)
+            width: calc(50% - 6px)
+            margin-bottom: $spacer-15
+
+    &_boxAreaText
+        font-weight: $fw-semi-bold
+        font-size: 14px
+        line-height: 100%
+        padding: $spacer-15
+        min-width: 132px
+        box-shadow: $box-shadow
+        border-radius: 25px
+        background-color: $color-white
+        transition: $transition-global
+        cursor: pointer
+        text-align: center
+        color: $color-red
+        display: block
+
+        @media all and (max-width: $breakpoint-phone)
+            padding: $spacer-15 $spacer-05
+            min-width: 0
+
+        &:hover
+            background-color: $color-red
+            color: $color-white
+
+    &_desc
+        font-size: 18px
+        line-height: 140%
+        margin-bottom: $spacer-25
+        max-width: 370px
+
+        @media all and (max-width: $breakpoint-phone)
+            font-size: 16px
+            line-height: 22px
+
+    &_largeFormInput
+        height: 54px
+        padding: $spacer-20 $spacer-25
+        background: #fff
+        border: 1px solid $color-black
+        box-sizing: border-box
+        border-radius: 5px
+        font-size: 15px
+        line-height: 100%
+        width: 100%
+        max-width: 240px
+        text-align: center
+        margin-right: $spacer-10
+
+        @media all and (max-width: $breakpoint-phone)
+            width: 100%
+            margin-right: 0
+            max-width: 100%
+            margin-bottom: $spacer-10
+            border-radius: 5px
+            height: 48px
+            font-size: 13px
+            padding: $spacer-15 $spacer-20
+
+    &_largeFormSubmit
+        background-color: $color-red
+        border-radius: 5px
+        border: 0px
+        padding: $spacer-20 $spacer-35
+        font-weight: $fw-bold
+        font-size: 15px
+        line-height: 100%
+        color: $color-white
+        height: 54px
+        transition: $transition-global
+
+        @media all and (max-width: $breakpoint-phone)
+            width: 100%
+            border-radius: 5px
+            height: 48px
+            font-size: 13px
+            padding: $spacer-15 $spacer-20
+
+        &:hover
+            background-color: $color-dark-red
+            cursor: pointer

@@ -1,0 +1,65 @@
+$mainClass: '.gst-stepItem'
+
+#{$mainClass}
+    width: 33.332%
+    border: 22px solid $color-transparent
+
+    @media all and (max-width: $breakpoint-tablet)
+        border: 15px solid $color-transparent
+
+    @media all and (max-width: $breakpoint-phone)
+        border: 0px
+        margin-bottom: $spacer-30
+        width: 100%
+
+    &_inner
+        background: $color-white
+        box-shadow: $box-shadow
+        border-radius: 15px
+        width: 100%
+        height: 100%
+        overflow: hidden
+
+    &_imgSrc
+        width: 100%
+
+    &_container
+        padding: $spacer-20
+
+    &_topLine
+        display: flex
+        align-items: center
+        margin-bottom: $spacer-15
+
+    &_number
+        border: 1px solid $color-red
+        border-radius: 50%
+        margin-right: $spacer-10
+        display: flex
+        justify-content: center
+        align-items: center
+        font-weight: $fw-extra-bold
+        font-size: 16px
+        color: $color-red
+        width: 35px
+        min-width: 35px
+        height: 35px
+
+    &_title
+        font-weight: $fw-bold
+        font-size: 16px
+        line-height: 18px
+
+    &_text
+        font-weight: $fw-semi-bold
+        font-size: 14px
+        line-height: 22px
+
+        a
+            color: $color-red
+
+            &:hover
+                text-decoration: none
+
+    &_nowrap
+        white-space: nowrap

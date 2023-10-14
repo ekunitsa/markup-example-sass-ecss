@@ -1,0 +1,97 @@
+$mainClass: '.gst-why'
+
+#{$mainClass}
+    margin-bottom: $spacer-60
+    overflow: hidden
+
+    @media all and (max-width: $breakpoint-tablet)
+        margin-bottom: $spacer-60
+
+    @media all and (max-width: $breakpoint-phone)
+        margin-bottom: $spacer-50
+
+    &_btns
+        display: flex
+        justify-content: center
+
+        @media all and (max-width: $breakpoint-phone)
+            display: block
+            padding-left: $spacer-20
+            padding-right: $spacer-20
+            margin: 0 auto
+
+    &_btn
+        background-color: $color-red
+        color: $color-white
+        font-weight: $fw-bold
+        font-size: 14px
+        border-radius: 5px
+        padding: $spacer-15 $spacer-20
+        text-decoration: none
+        white-space: nowrap
+        display: inline-block
+        margin: 0 $spacer-10
+        min-width: 289px
+        border: 1px solid $color-red
+        text-align: center
+
+        @media all and (max-width: $breakpoint-tablet)
+            min-width: 223px
+
+        @media all and (max-width: $breakpoint-phone)
+            margin-bottom: $spacer-15
+            display: block
+            margin-left: 0
+            margin-right: 0
+
+        &:hover
+            background-color: $color-dark-red
+
+    &_btnInvert
+        background-color: $color-transparent
+        color: $color-black
+        border: 1px solid $color-red
+        font-weight: $fw-bold
+        font-size: 14px
+        border-radius: 5px
+        padding: $spacer-15 $spacer-20
+        text-decoration: none
+        white-space: nowrap
+        display: inline-block
+        margin: 0 $spacer-10
+        min-width: 289px
+        text-align: center
+
+        @media all and (max-width: $breakpoint-tablet)
+            min-width: 223px
+
+        @media all and (max-width: $breakpoint-phone)
+            display: block
+            margin-left: 0
+            margin-right: 0
+
+        &:hover
+            background-color: $color-dark-red
+            color: $color-white
+
+    &_list
+        display: flex
+        flex-wrap: wrap
+        margin-left: -$spacer-25
+        margin-right: -$spacer-25
+        justify-content: center
+        margin-bottom: $spacer-40
+        margin-top: -$spacer-25
+
+        @media all and (max-width: $breakpoint-tablet)
+            display: flex
+            flex-wrap: wrap
+            margin-left: -$spacer-15
+            margin-right: -$spacer-15
+            margin-top: -$spacer-15
+
+        @media all and (max-width: $breakpoint-phone)
+            display: block
+            margin-left: 0
+            margin-right: 0
+            margin-top: 0

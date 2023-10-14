@@ -1,0 +1,163 @@
+{% set kitchenStyles = [
+    {
+        'imgname': 'img1',
+        'text': 'Modern Style'
+    }, {
+        'imgname': 'img2',
+        'text': 'Loft Kitchens'
+    }, {
+        'imgname': 'img3',
+        'text': 'Classic Style'
+    }, {
+        'imgname': 'img4',
+        'text': 'Other'
+    },
+] %}
+
+{% set kitchenForms = [
+    {
+        'imgname': 'form1',
+        'text': 'Straight Kitchen'
+    }, {
+        'imgname': 'form2',
+        'text': 'Corner kitchen'
+    }, {
+        'imgname': 'form3',
+        'text': 'U-shaped kitchen'
+    }, {
+        'imgname': 'form4',
+        'text': 'Parallel kitchen'
+    }, {
+        'imgname': 'form5',
+        'text': 'Kitchen with an island'
+    }, {
+        'imgname': 'form6',
+        'text': 'Other forms'
+    },
+] %}
+
+{% set kitchenArea = [
+    {
+        'text': 'Up to 5 m<sup>2</sup>'
+    }, {
+        'text': 'Up to 8 m<sup>2</sup>'
+    }, {
+        'text': 'Up to 15 m<sup>2</sup>'
+    }, {
+        'text': 'Other'
+    },
+] %}
+
+<div id="callback" class="js-modal-wrapper gst-modal_wrapper gst-modal_wrapperSmall mfp-hide">
+    <div class="gst-modal_text">
+        Leave your phone number now and our designer will contact you shortly!
+    </div>
+
+    <form class="gst-modal_smallForm">
+        <input type="text" name="phone" class="gst-modal_smallFormInput js-phoneMask" placeholder="Your phone">
+        <input type="submit" class="gst-modal_smallFormSubmit" value="Get Catalog">
+    </form>
+</div>
+
+<div id="cost" class="js-modal-wrapper gst-modal_wrapper gst-modal_wrapperLarge mfp-hide">
+    <div class="gst-modal_title">
+        Find out <span class="gst-base_colorRed">the price of your kitchen</span>
+    </div>
+
+    <form id="costForm">
+        <div class="gst-modal_box">
+            <div class="gst-modal_boxTitle">
+                Style:
+            </div>
+
+            <div class="gst-modal_boxStyleList">
+                {% for item in kitchenStyles %}
+                    <div class="gst-modal_boxStyleOneElemWrap">
+                        <input type="radio" name="style" class="gst-modal_boxStyleRadio" value="{{ item.text }}" id="style_{{ item.imgname }}">
+                        <label for="style_{{ item.imgname }}">
+                            <span class="gst-modal_boxStyleOneElem">
+                                <span class="gst-modal_boxStyleImg">
+                                    <picture>
+                                        <source srcset="./img/modal/{{ item.imgname }}.avif 1x, ./img/modal/{{ item.imgname }}@2x.avif 2x" type="image/avif">
+                                        <source srcset="./img/modal/{{ item.imgname }}.webp 1x, ./img/modal/{{ item.imgname }}@2x.webp 2x" type="image/webp">
+                                        <img
+                                            class="gst-modal_boxStyleImgSrc"
+                                            src="./img/modal/{{ item.imgname }}.jpg"
+                                            alt="Style"
+                                            srcset="./img/modal/{{ item.imgname }}.jpg 1x, ./img/modal/{{ item.imgname }}@2x.jpg 2x"
+                                        >
+                                    </picture>
+                                </span>
+                                <span class="gst-modal_boxStyleText">
+                                    {{ item.text }}
+                                </span>
+                            </span>
+                        </label>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+
+        <div class="gst-modal_box">
+            <div class="gst-modal_boxTitle">
+                Form:
+            </div>
+
+            <div class="gst-modal_boxFormList">
+                {% for item in kitchenForms %}
+                    <div class="gst-modal_boxFormOneElemWrap">
+                        <input type="radio" name="form" class="gst-modal_boxFormRadio" value="{{ item.text }}" id="form_{{ item.imgname }}">
+                        <label for="form_{{ item.imgname }}">
+                            <span class="gst-modal_boxFormOneElem">
+                                <span class="gst-modal_boxFormImg">
+                                    {% include '../../img/modal/'~ item.imgname ~'.svg' %}
+                                </span>
+                                <span class="gst-modal_boxFormText">
+                                    {{ item.text }}
+                                </span>
+                            </span>
+                        </label>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+
+        <div class="gst-modal_box">
+            <div class="gst-modal_boxTitle">
+                Kitchen area:
+            </div>
+
+            <div class="gst-modal_boxAreaList">
+                {% for item in kitchenArea %}
+                    <div class="gst-modal_boxAreaOneElemWrap">
+                        <input type="radio" name="area" class="gst-modal_boxAreaRadio" value="{{ item.text|striptags }}" id="area_{{ loop.index }}">
+                        <label for="area_{{ loop.index }}">
+                            <span class="gst-modal_boxAreaOneElem">
+                                <span class="gst-modal_boxAreaText">
+                                    {{ item.text }}
+                                </span>
+                            </span>
+                        </label>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+
+        <div class="gst-modal_desc">
+            Leave your phone number now and our designer will contact you shortly!
+        </div>
+
+        <div class="gst-modal_largeForm">
+            <input type="text" name="phone" class="gst-modal_largeFormInput js-phoneMask" placeholder="Your phone">
+            <input type="submit" class="gst-modal_largeFormSubmit" value="Calculate the cost">
+        </div>
+    </form>
+
+    <script>
+        // DEMO: get data in console after click submit
+        document.querySelector('#costForm').addEventListener('submit', (e) => {
+            e.preventDefault();
+            console.log(Object.fromEntries(new FormData(e.target).entries()))
+        });
+    </script>
+</div>

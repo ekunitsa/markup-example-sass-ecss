@@ -1,0 +1,72 @@
+$mainClass: '.gst-whyItem'
+
+#{$mainClass}
+    width: 33.332%
+    border: 22px solid $color-transparent
+
+    @media all and (max-width: $breakpoint-tablet)
+        border: 15px solid $color-transparent
+
+    @media all and (max-width: $breakpoint-phone)
+        border: 0px
+        margin-bottom: $spacer-30
+        width: 100%
+
+    &_imgLink
+        display: none
+        background-color: $color-red
+        color: $color-white
+        font-weight: $fw-bold
+        font-size: 14px
+        border-radius: 5px
+        padding: $spacer-20 $spacer-50
+        text-decoration: none
+        white-space: nowrap
+        margin: 0 $spacer-10
+        border: 1px solid $color-red
+        text-align: center
+
+        @media all and (max-width: $breakpoint-tablet)
+            padding: $spacer-10 $spacer-30
+
+        &:hover
+            background-color: $color-dark-red
+
+    &_img
+        margin-bottom: $spacer-15
+        border-radius: 8px
+        overflow: hidden
+        position: relative
+
+        &:hover
+            &::before
+                content: ''
+                width: 100%
+                height: 100%
+                position: absolute
+                top: 0
+                left: 0
+                background-color: $color-white-065
+
+            #{$mainClass}
+                &_imgLink
+                    display: block
+                    position: absolute
+                    left: 50%
+                    top: 50%
+                    transform: translate(-50%, -50%)
+
+    &_imgSrc
+        width: 100%
+        display: block
+        border-radius: 8px
+
+    &_title
+        font-weight: $fw-bold
+        font-size: 18px
+        line-height: 21px
+        margin-bottom: $spacer-10
+
+    &_text
+        font-size: 16px
+        line-height: 23px

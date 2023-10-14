@@ -1,0 +1,196 @@
+$mainClass: '.gst-header'
+
+#{$mainClass}
+    background-color: $color-white-09
+    box-shadow: $box-shadow
+    left: 0
+    padding: $spacer-15 0
+    position: absolute
+    top: 0
+    width: 100%
+    z-index: 100
+
+    @media all and (max-width: $breakpoint-phone)
+        min-height: 176px
+        position: relative
+
+    &_top
+        align-items: center
+        display: flex
+        justify-content: space-between
+
+        @media all and (max-width: $breakpoint-phone)
+            display: block
+
+    &_logo
+        position: relative
+
+        @media all and (max-width: $breakpoint-phone)
+            left: $spacer-15
+            position: absolute
+            top: 0
+
+    &_desc
+        font-size: 12px
+        font-weight: $fw-semi-bold
+        line-height: 16px
+        margin-top: $spacer-10
+        text-transform: uppercase
+
+        @media all and (max-width: $breakpoint-tablet)
+            font-size: 8px
+            font-weight: $fw-semi-bold
+            line-height: 11px
+
+        @media all and (max-width: $breakpoint-phone)
+            margin-top: $spacer-05
+
+    &_time
+        font-size: 15px
+        font-weight: $fw-semi-bold
+        line-height: 25px
+        position: relative
+
+        @media all and (max-width: $breakpoint-tablet)
+            font-size: 10px
+            line-height: 18px
+
+        @media all and (max-width: $breakpoint-phone)
+            left: $spacer-15
+            line-height: 13px
+            position: absolute
+            top: $spacer-80
+
+            br:nth-child(2)
+                display: none
+
+    &_place
+        background: url(../../img/header/point.svg) no-repeat 0 center
+        font-size: 15px
+        font-weight: $fw-semi-bold
+        line-height: 25px
+        max-width: 230px
+        min-height: 50px
+        padding-left: $spacer-60
+        position: relative
+
+        @media all and (max-width: $breakpoint-tablet)
+            background-size: 32px 32px
+            font-size: 10px
+            line-height: 18px
+            min-height: 32px
+            padding-left: $spacer-45
+
+        @media all and (max-width: $breakpoint-phone)
+            background-size: 19px 19px
+            font-size: 9px
+            font-weight: $fw-regular
+            left: $spacer-15
+            line-height: 11px
+            min-height: 19px
+            padding-left: $spacer-30
+            position: absolute
+            top: 120px
+
+    &_calcBtn
+        background-color: $color-red
+        border-radius: 5px
+        color: $color-white
+        font-size: 15px
+        font-weight: $fw-bold
+        padding: $spacer-15 $spacer-20
+        text-decoration: none
+        white-space: nowrap
+
+        @media all and (max-width: $breakpoint-tablet)
+            font-size: 10px
+            font-weight: $fw-bold
+            line-height: 1
+            padding: $spacer-10 $spacer-15
+
+        &:hover
+            background-color: $color-dark-red
+
+    &_phones
+        text-align: right
+
+        @media all and (max-width: $breakpoint-phone)
+            position: absolute
+            right: $spacer-15
+            top: $spacer-50
+
+    &_phone
+        color: $color-black
+        display: block
+        font-size: 20px
+        font-weight: $fw-semi-bold
+        line-height: 25px
+        margin-bottom: $spacer-05
+        text-decoration: none
+        white-space: nowrap
+
+        @media all and (max-width: $breakpoint-tablet)
+            font-size: 18px
+            line-height: 25px
+
+        @media all and (max-width: $breakpoint-phone)
+            font-size: 14px
+            line-height: 1
+            margin-bottom: $spacer-05
+
+        &:hover
+            color: $color-dark-red
+
+    &_callback
+        color: $color-red
+        font-size: 14px
+        font-weight: $fw-semi-bold
+        line-height: 25px
+
+        @media all and (max-width: $breakpoint-tablet)
+            font-size: 12px
+
+        @media all and (max-width: $breakpoint-phone)
+            font-size: 12px
+            line-height: 1
+
+        &:hover
+            text-decoration: none
+
+    &_bottom
+        margin-top: $spacer-35
+
+        @media all and (max-width: $breakpoint-phone)
+            margin-top: 0px
+
+    &_redLine
+        background-color: $color-red
+        height: 70px
+        margin-top: -2px
+        width: 1px
+
+        @media all and (max-width: $breakpoint-phone)
+            display: none
+
+    &_burger
+        display: none
+
+        @media all and (max-width: $breakpoint-phone)
+            background: url(../../img/header/menu.svg) no-repeat center center
+            cursor: pointer
+            display: block
+            height: 35px
+            position: absolute
+            right: $spacer-15
+            top: 0px
+            width: 35px
+
+    &_logoImg
+        @media all and (max-width: $breakpoint-tablet)
+            max-width: 130px
+
+    &_calc
+        @media all and (max-width: $breakpoint-phone)
+            position: absolute
+            right: $spacer-15
+            top: 120px

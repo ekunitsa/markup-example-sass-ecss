@@ -1,0 +1,73 @@
+<div class="gst-kitchenItem">
+	<div class="gst-kitchenItem_inner">
+		<div class="gst-kitchenItem_img">
+			<picture>
+				<source srcset="./img/kitchen/img{{ loop.index }}.avif 1x, ./img/kitchen/img{{ loop.index }}@2x.avif 2x" type="image/avif">
+				<source srcset="./img/kitchen/img{{ loop.index }}.webp 1x, ./img/kitchen/img{{ loop.index }}@2x.webp 2x" type="image/webp">
+				<img
+                    class="gst-kitchenItem_imgSrc"
+                    src="./img/kitchen/img{{ loop.index }}.jpg"
+                    alt="{{ item.title }}"
+                    srcset="./img/kitchen/img{{ loop.index }}.jpg 1x, ./img/kitchen/img{{ loop.index }}@2x.jpg 2x"
+                >
+			</picture>
+		</div>
+
+		<div class="gst-kitchenItem_container">
+			<div class="gst-kitchenItem_oneline">
+				<span class="gst-kitchenItem_name">
+                    Facade material:
+                </span>
+
+				<span class="gst-kitchenItem_value">
+                    {{ item.material }}
+                </span>
+			</div>
+
+			<div class="gst-kitchenItem_oneline">
+				<span class="gst-kitchenItem_name">
+                    Fittings:
+                </span>
+				<span class="gst-kitchenItem_value">
+                    {{ item.fittings }}
+                </span>
+			</div>
+
+			<div class="gst-kitchenItem_oneline">
+				<span class="gst-kitchenItem_name">
+                    Countertop:
+                </span>
+				<span class="gst-kitchenItem_value">
+                    {{ item.countertop }}
+                </span>
+			</div>
+
+			<div class="gst-kitchenItem_oneline gst-kitchenItem_onelineCost">
+				<span class="gst-kitchenItem_name">
+                    Price:
+                </span>
+
+				<span class="gst-kitchenItem_priceOld">
+                    from <span>{{ item.priceOld }}</span>
+				</span>
+
+				<span class="gst-kitchenItem_priceNew">
+                    {{ item.priceNew }} $
+                </span>
+			</div>
+			<div class="gst-kitchenItem_btnContainer">
+				<div>
+					<a href="#callback" class="gst-kitchenItem_btnInvert js-modal">
+                        Get Catalog
+                    </a>
+				</div>
+
+				<div>
+					<a href="#cost" class="gst-kitchenItem_btn js-modal">
+                        Calculate the cost
+                    </a>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

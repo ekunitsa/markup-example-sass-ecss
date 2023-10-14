@@ -1,0 +1,150 @@
+$mainClass: '.gst-connect'
+
+#{$mainClass}
+    margin-bottom: $spacer-60
+    overflow: hidden
+
+    @media all and (max-width: $breakpoint-phone)
+        margin-bottom: $spacer-50
+
+    &_flex
+        display: flex
+
+        @media all and (max-width: $breakpoint-phone)
+            display: block
+
+    &_left
+        width: 569px
+        margin-right: $spacer-80
+
+        @media all and (max-width: $breakpoint-tablet)
+            width: 330px
+            margin-right: $spacer-50
+
+        @media all and (max-width: $breakpoint-phone)
+            width: 100%
+            margin-right: 0
+            margin-bottom: $spacer-40
+
+    &_right
+        max-width: 450px
+
+        @media all and (max-width: $breakpoint-phone)
+            max-width: 100%
+
+    &_leftArrow, &_rightArrow
+        position: absolute
+        width: 50px
+        height: 50px
+        top: calc(50% - $spacer-25)
+        background-color: $color-white
+        transition: $transition-global
+        display: flex
+        justify-content: center
+        align-items: center
+        border-radius: 50%
+        z-index: 10
+        cursor: pointer
+
+        @media all and (max-width: $breakpoint-phone)
+            width: 39px
+            height: 39px
+
+        &:hover
+            background-color: $color-dark-red
+
+            svg
+                @media all and (max-width: $breakpoint-phone)
+                    width: 10px
+                path
+                    fill: white
+
+    &_leftArrow
+        left: -$spacer-25
+
+        @media all and (max-width: $breakpoint-phone)
+            left: -$spacer-10
+
+    &_rightArrow
+        right: -$spacer-25
+
+        @media all and (max-width: $breakpoint-phone)
+            right: -$spacer-10
+
+    &_miniTitle
+        text-transform: uppercase
+        font-weight: $fw-extra-bold
+        font-size: 36px
+        line-height: 49px
+        margin-bottom: $spacer-15
+
+        @media all and (max-width: $breakpoint-tablet)
+            font-size: 24px
+            line-height: 33px
+
+    &_text
+        p
+            font-size: 20px
+            line-height: 153%
+
+            @media all and (max-width: $breakpoint-tablet)
+                font-size: 18px
+                line-height: 28px
+
+        ul
+            margin-top: $spacer-25
+            margin-bottom: $spacer-35
+            padding-left: 0
+
+            li
+                font-size: 18px
+                line-height: 25px
+                min-height: 26px
+                margin-bottom: $spacer-15
+                list-style: none
+                background: url(../../img/mark.svg) no-repeat left center
+                padding-left: $spacer-55
+
+    &_formWrapper
+        background: $color-white
+        box-shadow: $box-shadow
+        border-radius: 10px
+        padding: $spacer-20
+        margin-top: $spacer-25
+
+    &_input
+        background: $color-gray-f9
+        border: 1px solid $color-gray-e8
+        border-radius: 4px
+        height: 54px
+        padding: $spacer-20 $spacer-25
+        box-sizing: border-box
+        font-size: 15px
+        line-height: 100%
+        width: 100%
+        margin-bottom: $spacer-10
+
+    &_submit
+        background-color: $color-red
+        color: $color-white
+        font-weight: $fw-bold
+        font-size: 14px
+        border-radius: 5px
+        padding: $spacer-20
+        text-decoration: none
+        white-space: nowrap
+        display: inline-block
+        width: 100%
+        border: 1px solid $color-red
+        text-align: center
+
+        &:hover
+            background-color: $color-dark-red
+
+    // slick
+    .slick
+        &-list
+            padding: 0 $spacer-20
+            margin: 0px (-$spacer-60)
+        &-slide
+            margin: 0 $spacer-40

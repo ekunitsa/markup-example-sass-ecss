@@ -1,0 +1,30 @@
+$mainClass: '.gst-footer'
+
+#{$mainClass}
+    background-color: $color-white-f1
+    padding: $spacer-25 0
+    color: $color-light-gray
+    font-weight: $fw-medium
+    font-size: 14px
+    line-height: 16px
+
+    @media all and (max-width: $breakpoint-tablet)
+        padding: $spacer-20 0
+
+    &_policyLink
+        color: $color-light-gray
+
+    &_flex
+        display: flex
+        justify-content: space-between
+
+        @media all and (max-width: $breakpoint-tablet)
+            display: block
+
+    &_flexLeft
+        @media all and (max-width: $breakpoint-tablet)
+            width: 100%
+            margin-bottom: $spacer-10
+
+    &_policy
+        margin-bottom: $spacer-10

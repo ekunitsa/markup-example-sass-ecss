@@ -1,0 +1,71 @@
+{% set kitchen = [
+  {
+    'material': 'plastic',
+    'fittings': 'Fennel',
+    'countertop': 'Postforming',
+    'priceOld': '26 850',
+    'priceNew': '19 990',
+  }, {
+    'material': 'Painted MDF',
+    'fittings': 'Braun',
+    'countertop': 'Compact plate',
+    'priceOld': '28 620',
+    'priceNew': '21 200',
+  }, {
+    'material': 'plastic',
+    'fittings': 'Fennel',
+    'countertop': 'Postforming',
+    'priceOld': '26 850',
+    'priceNew': '19 990',
+  }, {
+    'material': 'Painted MDF',
+    'fittings': 'Braun',
+    'countertop': 'Compact plate',
+    'priceOld': '28 620',
+    'priceNew': '21 200',
+  }, {
+    'material': 'plastic',
+    'fittings': 'Blum',
+    'countertop': 'Postforming',
+    'priceOld': '32 900',
+    'priceNew': '24 400',
+  }, {
+    'material': 'plastic',
+    'fittings': 'Fennel',
+    'countertop': 'Postforming',
+    'priceOld': '26 850',
+    'priceNew': '19 990',
+  }, {
+    'material': 'Veneered MDF',
+    'fittings': 'Blum',
+    'countertop': 'Postforming',
+    'priceOld': '28 620',
+    'priceNew': '21 200',
+  }, {
+    'material': 'plastic',
+    'fittings': 'Braun',
+    'countertop': 'Compact plate',
+    'priceOld': '32 900',
+    'priceNew': '24 400',
+  }, {
+    'material': 'plastic',
+    'fittings': 'Blum',
+    'countertop': 'Postforming',
+    'priceOld': '32 900',
+    'priceNew': '24 400',
+  },
+] %}
+
+<section class="gst-kitchen" data-scroll="prices">
+	<div class="gst-base_wrapper">
+		<h2 class="gst-base_globalTitle">
+            What kind of<br> <span class="gst-base_colorRed">kitchens do we produce?</span>
+		</h2>
+
+		<div class="gst-kitchen_list">
+			{% for item in kitchen %}
+				{% include '../../components/kitchenItem/kitchenItem.twig' %}
+			{% endfor %}
+		</div>
+	</div>
+</section>
