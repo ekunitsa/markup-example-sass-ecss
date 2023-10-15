@@ -1,33 +1,38 @@
 $mainClass: '.gst-additionallyItem'
 
 #{$mainClass}
+    flex: 1 1 33%
+
+    @media all and (max-width: $breakpoint-phone)
+        margin-bottom: $spacer-30
+
+    &:last-child
+        @media all and (max-width: $breakpoint-phone)
+            margin-bottom: 0
+
     &_inner
         background: $color-white
-        box-shadow: $box-shadow
         border-radius: 15px
-        width: 100%
+        box-shadow: $box-shadow
         height: 100%
         overflow: hidden
+        width: 100%
 
         @media all and (max-width: $breakpoint-phone)
             border: 0px
-            margin-bottom: $spacer-30
             width: 100%
 
-            &:last-child
-                margin-bottom: 0
-
     &_imgSrc
-        width: 100%
         display: block
+        width: 100%
 
     &_container
         padding: $spacer-25 $spacer-20
 
     &_title
-        font-weight: $fw-semi-bold
         font-size: 18px
-        line-height: 21px
+        font-weight: $fw-semi-bold
+        line-height: $lh-small
         margin-bottom: $spacer-25
 
         br
@@ -40,21 +45,22 @@ $mainClass: '.gst-additionallyItem'
                 display: none
 
     &_text
-        font-weight: $fw-semi-bold
         font-size: 14px
-        line-height: 22px
+        font-weight: $fw-semi-bold
 
     &_btn
         background-color: $color-red
-        color: $color-white
-        font-weight: $fw-bold
-        font-size: 14px
         border-radius: 5px
-        padding: $spacer-20 $spacer-50
+        border: 1px solid $color-red
+        color: $color-white
+        display: inline-block
+        font-size: 14px
+        font-weight: $fw-bold
+        min-width: 180px
+        padding: $spacer-15
+        text-align: center
         text-decoration: none
         white-space: nowrap
-        display: inline-block
-        border: 1px solid $color-red
 
         &:hover
             background-color: $color-dark-red

@@ -1,8 +1,9 @@
 $mainClass: '.gst-base'
 
 body
-    font-family: $font-openSans
     color: $color-black
+    font-family: $font-openSans
+    line-height: $lh-base
 
 *
     box-sizing: border-box
@@ -51,7 +52,7 @@ a
     &_globalTitle
         font-size: 48px
         font-weight: $fw-extra-bold
-        line-height: 55px
+        line-height: $lh-small
         margin-bottom: $spacer-50
         margin-top: 0
         padding-bottom: $spacer-25
@@ -59,7 +60,6 @@ a
 
         @media all and (max-width: $breakpoint-tablet)
             font-size: 32px
-            line-height: 37px
             margin-bottom: $spacer-40
 
         @media all and (max-width: $breakpoint-phone)
@@ -88,12 +88,10 @@ a
 
     &_globalDesc
         font-size: 28px
-        line-height: 32px
         margin-bottom: $spacer-50
 
         @media all and (max-width: $breakpoint-tablet)
             font-size: 20px
-            line-height: 23px
             margin-bottom: $spacer-40
 
 .svg-form

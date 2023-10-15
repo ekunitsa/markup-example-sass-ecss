@@ -2,31 +2,21 @@ $mainClass: '.gst-model'
 
 #{$mainClass}
     padding-bottom: $spacer-100
-    overflow: hidden
 
     @media all and (max-width: $breakpoint-tablet)
         padding-bottom: $spacer-60
 
     @media all and (max-width: $breakpoint-phone)
-        padding-bottom: $spacer-50
+        padding-bottom: $spacer-40
 
     &_list
         display: flex
-        flex-wrap: wrap
-        margin-left: -$spacer-25
-        margin-right: -$spacer-25
+        gap: $spacer-40
         justify-content: center
-        margin-top: -$spacer-25
 
         @media all and (max-width: $breakpoint-tablet)
-            display: flex
-            flex-wrap: wrap
-            margin-left: -$spacer-15
-            margin-right: -$spacer-15
-            margin-top: -$spacer-15
+            gap: $spacer-15
 
         @media all and (max-width: $breakpoint-phone)
             display: block
-            margin-left: 0
-            margin-right: 0
-            margin-top: 0
+            flex-wrap: wrap

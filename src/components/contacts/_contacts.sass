@@ -7,18 +7,19 @@ $mainClass: '.gst-contacts'
         padding-bottom: $spacer-60
 
     @media all and (max-width: $breakpoint-phone)
-        padding-bottom: $spacer-50
+        padding-bottom: $spacer-40
 
     &_title
-        font-weight: $fw-extra-bold
         font-size: 48px
-        line-height: 55px
+        font-weight: $fw-extra-bold
+        line-height: $lh-small
         margin-bottom: $spacer-50
         text-align: center
+        margin-top: 0
 
         @media all and (max-width: $breakpoint-tablet)
-            font-weight: $fw-extra-bold
             font-size: 32px
+            font-weight: $fw-extra-bold
             margin-bottom: $spacer-40
 
         @media all and (max-width: $breakpoint-phone)
@@ -35,24 +36,21 @@ $mainClass: '.gst-contacts'
         display: none
 
         @media all and (max-width: $breakpoint-phone)
-            display: block
             background: $color-white
-            box-shadow: $box-shadow
             border-radius: 15px
-            margin-left: $spacer-05
-            margin-right: $spacer-05
-            margin-top: -$spacer-30
+            box-shadow: $box-shadow
+            display: block
+            font-size: 14px
+            font-weight: $fw-semi-bold
+            margin: -$spacer-30 $spacer-05 0 $spacer-05
+            padding: $spacer-30 $spacer-20
             position: relative
             z-index: 2
-            padding: $spacer-30 $spacer-20
-            font-weight: $fw-semi-bold
-            font-size: 14px
-            line-height: 25px
 
     &_phone
+        color: initial
         display: inline-block
         text-decoration: none
-        color: initial
 
         &:hover
             color: $color-dark-red
@@ -61,12 +59,12 @@ $mainClass: '.gst-contacts'
         margin-bottom: $spacer-15
 
     &_time, &_place, &_phones
-        min-height: 50px
-        display: flex
         align-items: center
-        padding-left: $spacer-55
         background-position: left center
         background-repeat: no-repeat
+        display: flex
+        min-height: 50px
+        padding-left: $spacer-55
 
     &_time
         background-image: url(../../img/contacts/clock.svg)

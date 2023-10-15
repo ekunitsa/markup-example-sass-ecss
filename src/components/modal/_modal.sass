@@ -2,17 +2,16 @@ $mainClass: '.gst-modal'
 
 #{$mainClass}
     &_wrapper
-        position: relative
         background: $color-white
-        width: 100%
         border-radius: 10px
         margin: 0 auto
+        position: relative
+        width: 100%
 
     &_wrapperSmall
-        padding: $spacer-45
         max-width: 490px
+        padding: $spacer-45
         text-align: center
-        line-height: 29px
 
         @media all and (max-width: $breakpoint-tablet)
             padding: $spacer-40
@@ -21,8 +20,8 @@ $mainClass: '.gst-modal'
             padding: $spacer-40 $spacer-20
 
     &_wrapperLarge
-        padding: $spacer-45
         max-width: 900px
+        padding: $spacer-45
 
         @media all and (max-width: $breakpoint-tablet)
             padding: $spacer-40
@@ -31,27 +30,26 @@ $mainClass: '.gst-modal'
             padding: $spacer-40 $spacer-20
 
     &_text
-        margin-bottom: $spacer-20
         font-size: 22px
+        line-height: $lh-medium
+        margin-bottom: $spacer-20
 
         @media all and (max-width: $breakpoint-tablet)
             font-size: 20px
-            line-height: 26px
 
         @media all and (max-width: $breakpoint-phone)
             font-size: 16px
-            line-height: 22px
 
     &_smallFormInput
-        width: 100%
+        border-radius: 5px
         border: 1px solid $color-black
         box-sizing: border-box
-        border-radius: 5px
-        padding: $spacer-15
-        text-align: center
+        font-size: 15px
         height: 54px
         margin-bottom: $spacer-10
-        font-size: 15px
+        padding: $spacer-15
+        text-align: center
+        width: 100%
 
         @media all and (max-width: $breakpoint-phone)
             font-size: 13px
@@ -62,12 +60,11 @@ $mainClass: '.gst-modal'
         background-color: $color-red
         border-radius: 5px
         border: 0px
-        padding: $spacer-20 $spacer-35
-        font-weight: $fw-bold
-        font-size: 15px
-        line-height: 100%
         color: $color-white
+        font-size: 15px
+        font-weight: $fw-bold
         height: 54px
+        padding: $spacer-20 $spacer-35
         transition: $transition-global
         width: 100%
 
@@ -81,17 +78,17 @@ $mainClass: '.gst-modal'
             cursor: pointer
 
     &_title
-        font-weight: $fw-extra-bold
         font-size: 32px
-        line-height: 37px
+        font-weight: $fw-extra-bold
+        line-height: $lh-small
         margin-bottom: $spacer-40
 
     &_box
         background: $color-white
-        border: 1px solid $color-gray-e8
-        box-sizing: border-box
-        box-shadow: $box-shadow
         border-radius: 15px
+        border: 1px solid $color-gray-e8
+        box-shadow: $box-shadow
+        box-sizing: border-box
         margin-bottom: $spacer-30
         padding: $spacer-25
 
@@ -99,43 +96,34 @@ $mainClass: '.gst-modal'
             padding: $spacer-15
 
     &_boxTitle
-        font-weight: $fw-semi-bold
         font-size: 16px
-        line-height: 100%
+        font-weight: $fw-semi-bold
         margin-bottom: $spacer-25
 
     &_boxStyleList
         display: flex
+        gap: $spacer-15
         justify-content: space-between
-
-        @media all and (max-width: $breakpoint-tablet)
-            justify-content: flex-start
 
         @media all and (max-width: $breakpoint-phone)
             flex-wrap: wrap
-            margin-bottom: -$spacer-15
             justify-content: space-between
 
     &_boxStyleImgSrc
-        width: 100%
-        max-width: 160px
         display: block
+        width: 100%
 
         @media all and (max-width: $breakpoint-phone)
             max-width: 100%
 
     &_boxStyleOneElem
-        width: 160px
-        box-shadow: $box-shadow
-        transition: $transition-global
-        border-radius: 7px
-        overflow: hidden
         background-color: $color-white
+        border-radius: 7px
+        box-shadow: $box-shadow
         display: block
-
-        @media all and (max-width: $breakpoint-tablet)
-            width: 130px
-            margin-right: $spacer-15
+        overflow: hidden
+        transition: $transition-global
+        width: 100%
 
         @media all and (max-width: $breakpoint-phone)
             margin-right: 0
@@ -147,12 +135,13 @@ $mainClass: '.gst-modal'
 
             #{$mainClass}
                 &_boxStyleText
-                    color: white
+                    color: $color-white
 
     &_boxStyleOneElemWrap
+        flex: 1 1 25%
+
         @media all and (max-width: $breakpoint-phone)
-            margin-bottom: $spacer-15
-            width: calc(50% - 6px)
+            flex-basis: calc(50% - 8px)
 
     &_boxStyleRadio
         display: none
@@ -169,11 +158,11 @@ $mainClass: '.gst-modal'
                         background-color: $color-red
 
                     &_boxStyleText
-                        color: white
+                        color: $color-white
     &_boxStyleText
-        padding: $spacer-10
-        font-size: 14px
         display: block
+        font-size: 14px
+        padding: $spacer-10
 
     &_boxStyleImg
         display: block
@@ -181,24 +170,21 @@ $mainClass: '.gst-modal'
     &_boxFormList
         display: flex
         justify-content: space-between
+        row-gap: $spacer-30
 
         @media all and (max-width: $breakpoint-tablet)
             flex-wrap: wrap
-            margin-bottom: -$spacer-30
 
     &_boxFormText
-        font-size: 12px
         display: block
+        font-size: 12px
 
         @media all and (max-width: $breakpoint-phone)
             padding: 0 $spacer-05
 
     &_boxFormOneElem
-        text-align: center
         display: block
-
-        @media all and (max-width: $breakpoint-tablet)
-            margin-bottom: $spacer-30
+        text-align: center
 
         &:hover
             cursor: pointer
@@ -208,27 +194,27 @@ $mainClass: '.gst-modal'
                     background-color: $color-red
 
                     .svg-form *
-                        fill: white
+                        fill: $color-white
 
     &_boxFormOneElemWrap
         @media all and (max-width: $breakpoint-tablet)
-            width: 33%
+            flex: 1 1 33%
 
     &_boxFormImg
-        background: $color-white
-        box-shadow: $box-shadow
-        border-radius: 50%
-        margin-bottom: $spacer-15
-        width: 70px
-        height: 70px
-        display: inline-flex
-        justify-content: center
         align-items: center
+        background: $color-white
+        border-radius: 50%
+        box-shadow: $box-shadow
+        display: inline-flex
+        height: 70px
+        justify-content: center
+        margin-bottom: $spacer-15
         transition: $transition-global
+        width: 70px
 
         @media all and (max-width: $breakpoint-phone)
-            width: 56px
             height: 56px
+            width: 56px
 
     &_boxFormRadio
         display: none
@@ -243,14 +229,14 @@ $mainClass: '.gst-modal'
                         background-color: $color-red
 
                         .svg-form *
-                            fill: white
+                            fill: $color-white
     &_boxAreaList
         display: flex
+        gap: $spacer-15
 
         @media all and (max-width: $breakpoint-phone)
             flex-wrap: wrap
             justify-content: space-between
-            margin-bottom: -$spacer-15
 
     &_boxAreaRadio
         display: none
@@ -263,38 +249,34 @@ $mainClass: '.gst-modal'
                         color: $color-white
 
     &_boxAreaOneElem
-        margin-right: $spacer-40
         display: block
-
-        @media all and (max-width: $breakpoint-tablet)
-            margin-right: $spacer-20
 
         @media all and (max-width: $breakpoint-phone)
             margin-right: 0
 
     &_boxAreaOneElemWrap
+        flex: 1 1 25%
+
         @media all and (max-width: $breakpoint-phone)
-            width: calc(50% - 6px)
-            margin-bottom: $spacer-15
+            flex-basis: calc(50% - 8px)
 
     &_boxAreaText
-        font-weight: $fw-semi-bold
-        font-size: 14px
-        line-height: 100%
-        padding: $spacer-15
-        min-width: 132px
-        box-shadow: $box-shadow
-        border-radius: 25px
         background-color: $color-white
-        transition: $transition-global
-        cursor: pointer
-        text-align: center
+        border-radius: 25px
+        box-shadow: $box-shadow
         color: $color-red
+        cursor: pointer
         display: block
+        font-size: 14px
+        font-weight: $fw-semi-bold
+        min-width: 132px
+        padding: $spacer-15
+        text-align: center
+        transition: $transition-global
 
         @media all and (max-width: $breakpoint-phone)
-            padding: $spacer-15 $spacer-05
             min-width: 0
+            padding: $spacer-15 $spacer-05
 
         &:hover
             background-color: $color-red
@@ -302,56 +284,52 @@ $mainClass: '.gst-modal'
 
     &_desc
         font-size: 18px
-        line-height: 140%
         margin-bottom: $spacer-25
         max-width: 370px
 
         @media all and (max-width: $breakpoint-phone)
             font-size: 16px
-            line-height: 22px
 
     &_largeFormInput
-        height: 54px
-        padding: $spacer-20 $spacer-25
-        background: #fff
+        background: $color-white
+        border-radius: 5px
         border: 1px solid $color-black
         box-sizing: border-box
-        border-radius: 5px
         font-size: 15px
-        line-height: 100%
-        width: 100%
-        max-width: 240px
-        text-align: center
+        height: 54px
         margin-right: $spacer-10
+        max-width: 240px
+        padding: $spacer-20 $spacer-25
+        text-align: center
+        width: 100%
 
         @media all and (max-width: $breakpoint-phone)
-            width: 100%
+            border-radius: 5px
+            font-size: 13px
+            height: 48px
+            margin-bottom: $spacer-10
             margin-right: 0
             max-width: 100%
-            margin-bottom: $spacer-10
-            border-radius: 5px
-            height: 48px
-            font-size: 13px
             padding: $spacer-15 $spacer-20
+            width: 100%
 
     &_largeFormSubmit
         background-color: $color-red
         border-radius: 5px
         border: 0px
-        padding: $spacer-20 $spacer-35
-        font-weight: $fw-bold
-        font-size: 15px
-        line-height: 100%
         color: $color-white
+        font-size: 15px
+        font-weight: $fw-bold
         height: 54px
+        padding: $spacer-20 $spacer-35
         transition: $transition-global
 
         @media all and (max-width: $breakpoint-phone)
-            width: 100%
             border-radius: 5px
-            height: 48px
             font-size: 13px
+            height: 48px
             padding: $spacer-15 $spacer-20
+            width: 100%
 
         &:hover
             background-color: $color-dark-red

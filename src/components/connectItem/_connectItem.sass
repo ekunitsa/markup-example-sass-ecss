@@ -2,22 +2,22 @@ $mainClass: '.gst-connectItem'
 
 #{$mainClass}
     &_imgSrc
-        width: 100%
         border-radius: 12px
+        width: 100%
 
     &_img
         margin-bottom: $spacer-20
 
     &_text
-        box-shadow: $box-shadow
         border-radius: 15px
+        box-shadow: $box-shadow
+        font-size: 20px
+        line-height: $lh-medium
+        margin-bottom: $spacer-20
         padding: $spacer-30 $spacer-20
         text-align: center
-        margin-bottom: $spacer-20
-        font-size: 20px
-        line-height: 25px
 
         @media all and (max-width: $breakpoint-tablet)
             font-size: 16px
-            line-height: 25px
+            line-height: $lh-base
             padding: $spacer-15 $spacer-20

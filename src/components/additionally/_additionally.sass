@@ -1,41 +1,39 @@
 $mainClass: '.gst-additionally'
 
 #{$mainClass}
-    padding-bottom: $spacer-60
-    padding-top: $spacer-60
-    margin-bottom: $spacer-30
-    position: relative
-    overflow: hidden
     background-position: center center
     background-repeat: no-repeat
     background-size: 1920px auto
+    padding-bottom: $spacer-100
+    padding-top: $spacer-40
+    position: relative
 
     @media all and (max-width: $breakpoint-tablet)
         padding-bottom: $spacer-60
-        padding-top: $spacer-45
+        padding-top: $spacer-40
 
     @media all and (max-width: $breakpoint-phone)
-        padding-bottom: $spacer-50
+        background-image: none
         margin-bottom: 0
+        padding-bottom: $spacer-40
         padding-top: 0
-        background-image: none!important
 
     &::before
-        content: ''
         background: $gradient-white
+        content: ''
+        height: 100%
+        left: 0
         position: absolute
         top: 0
-        left: 0
         width: 100%
-        height: 100%
 
     &_list
         display: flex
+        gap: $spacer-40
         justify-content: center
-        gap: $spacer-45
 
         @media all and (max-width: $breakpoint-tablet)
-            gap: $spacer-30
+            gap: $spacer-15
 
         @media all and (max-width: $breakpoint-phone)
             display: block
@@ -48,6 +46,8 @@ $mainClass: '.gst-additionally'
 
         @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), all and (min-width: 991px)
             background-image: url(../../img/additionally/bg@2x.jpg)
+        @media all and (max-width: $breakpoint-phone)
+            background-image: none
 
 .webp
     #{$mainClass}
@@ -55,6 +55,8 @@ $mainClass: '.gst-additionally'
 
         @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), all and (min-width: 991px)
             background-image: url(../../img/additionally/bg@2x.jpg?as=webp)
+        @media all and (max-width: $breakpoint-phone)
+            background-image: none
 
 .avif
     #{$mainClass}
@@ -62,3 +64,5 @@ $mainClass: '.gst-additionally'
 
         @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), all and (min-width: 991px)
             background-image: url(../../img/additionally/bg@2x.jpg?as=avif)
+        @media all and (max-width: $breakpoint-phone)
+            background-image: none

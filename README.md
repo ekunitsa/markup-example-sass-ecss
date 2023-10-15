@@ -1,7 +1,7 @@
 # Markup example. Landing page.
 
 > [!NOTE]
-> This is an outdated markup. It shows an example of using sass together with the ecss approach. I did a refactoring of it in the end of 2023, but, nothing more than that. It was actually implemented around beginning of 2021 (and added to the github some time later) for the portfolio. If you consider my repositories as my portfolio - please take a look at more modern markups in my profile which using scss, BEM and mobile-first approach.
+> This markup shows an example of using sass together with the ecss approach. It was actually implemented around beginning of 2021 for the portfolio. I did a refactoring of it in the end of 2023. If you consider my repositories as my portfolio - please take a look at more modern markups in my profile which using scss, BEM and mobile-first approach.
 
 TWIG | SASS | ECSS
 
@@ -16,9 +16,10 @@ Result url - https://github.ekunitsa.com/markup-example-sass-ecss/
 - npm run start
 
 # СSS methodology - ECSS
-Documentation-presentation https://ecss.benfrain.com/
+Documentation: https://ecss.benfrain.com/
 
 With some nuances:
-- camelCase
-- desktop first
-- "is-" handle states
+- camelCase;
+- desktop first;
+- "is-" handle states;
+- At the time when I developed this layout - I worked in a company where several sites could be under one admin panel (multi-site). That's why we used the prefix as a unique site identifier. Here I kept this logic when developing. "gst-" is a unique site identifier which means "German Standard".

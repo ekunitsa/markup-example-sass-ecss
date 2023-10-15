@@ -1,63 +1,58 @@
 $mainClass: '.gst-kitchen'
 
 #{$mainClass}
-    padding-bottom: $spacer-100
-    padding-top: $spacer-60
-    margin-bottom: $spacer-30
-    position: relative
-    overflow: hidden
     background-position: center center
     background-repeat: repeat
+    padding-bottom: $spacer-100
+    padding-top: $spacer-60
+    position: relative
 
     @media all and (max-width: $breakpoint-tablet)
         padding-bottom: $spacer-60
-        padding-top: $spacer-45
+        padding-top: $spacer-20
 
     @media all and (max-width: $breakpoint-phone)
-        padding-bottom: $spacer-50
+        background-image: none
         margin-bottom: 0
+        padding-bottom: $spacer-40
         padding-top: 0
-        background-image: none!important
 
     &::before
-        content: ''
         background: $gradient-white
+        content: ''
+        height: 100%
+        left: 0
         position: absolute
         top: 0
-        left: 0
         width: 100%
-        height: 100%
 
     &_list
         display: flex
         flex-wrap: wrap
-        margin-left: -$spacer-25
-        margin-right: -$spacer-25
+        gap: $spacer-40
         justify-content: center
-        margin-top: -$spacer-25
 
         @media all and (max-width: $breakpoint-tablet)
-            display: flex
-            flex-wrap: wrap
-            margin-left: -$spacer-15
-            margin-right: -$spacer-15
-            margin-top: -$spacer-15
+            gap: $spacer-15
 
         @media all and (max-width: $breakpoint-phone)
             display: block
-            margin-left: 0
-            margin-right: 0
-            margin-top: 0
 
 // webp/avif optimization
 .fallback
     #{$mainClass}
         background-image: url(../../img/kitchen/bg_part.jpg)
+        @media all and (max-width: $breakpoint-phone)
+            background-image: none
 
 .webp
     #{$mainClass}
         background-image: url(../../img/kitchen/bg_part.jpg?as=webp)
+        @media all and (max-width: $breakpoint-phone)
+            background-image: none
 
 .avif
     #{$mainClass}
         background-image: url(../../img/kitchen/bg_part.jpg?as=avif)
+        @media all and (max-width: $breakpoint-phone)
+            background-image: none

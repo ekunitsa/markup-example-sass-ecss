@@ -1,22 +1,21 @@
 $mainClass: '.gst-questions'
 
 @mixin box
-    background: $color-white
-    box-shadow: $box-shadow
-    border-radius: 15px
-    width: 100%
-    padding: $spacer-30 $spacer-20 $spacer-30 $spacer-80
-    background-repeat: no-repeat
+    background-color: $color-white
     background-position: 20px center
-    font-weight: $fw-semi-bold
-    font-size: 15px
-    line-height: 25px
+    background-repeat: no-repeat
     background-size: 42px 42px
+    border-radius: 15px
+    box-shadow: $box-shadow
+    font-size: 15px
+    font-weight: $fw-semi-bold
+    padding: $spacer-30 $spacer-20 $spacer-30 $spacer-80
+    width: 100%
 
     @media all and (max-width: $breakpoint-phone)
-        padding: $spacer-25 $spacer-15 $spacer-25 $spacer-65
-        background-size: 35px 35px
         background-position: 17px center
+        background-size: 35px 35px
+        padding: $spacer-25 $spacer-15 $spacer-25 $spacer-65
 
     @media all and (max-width: $breakpoint-phone)
         margin-bottom: $spacer-50
@@ -27,48 +26,51 @@ $mainClass: '.gst-questions'
     @media all and (max-width: $breakpoint-tablet)
         margin-bottom: $spacer-60
 
+    @media all and (max-width: $breakpoint-phone)
+        margin-bottom: $spacer-40
+
     &_grid
-        display: grid
-        grid-template: "a c d" "b c d"
-        row-gap: $spacer-40
         column-gap: $spacer-100
+        display: grid
+        grid-template: "time photo phone" "adrs photo phone"
         padding: 0 $spacer-70
+        row-gap: $spacer-40
 
         @media all and (max-width: $breakpoint-tablet)
-            padding: 0
             column-gap: $spacer-40
+            padding: 0
 
         @media all and (max-width: $breakpoint-phone)
-            grid-template: "c" "d"
-            row-gap: $spacer-25
             column-gap: 0
+            grid-template: "photo" "phone"
             padding: 0 $spacer-55
+            row-gap: $spacer-25
 
     &_cellTime
-        grid-area: a
+        grid-area: time
 
         @media all and (max-width: $breakpoint-phone)
             display: none
 
     &_cellAdrs
-        grid-area: b
+        grid-area: adrs
 
         @media all and (max-width: $breakpoint-phone)
             display: none
 
     &_cellPhoto
-        grid-area: c
-        text-align: center
-        font-weight: $fw-extra-bold
-        font-size: 20px
         display: flex
-        justify-content: center
         flex-direction: column
+        font-size: 20px
+        font-weight: $fw-extra-bold
+        grid-area: photo
+        justify-content: center
+        text-align: center
 
     &_cellPhone
-        grid-area: d
-        display: flex
         align-items: center
+        display: flex
+        grid-area: phone
 
         @media all and (max-width: $breakpoint-phone)
             display: flex
@@ -88,6 +90,7 @@ $mainClass: '.gst-questions'
         white-space: nowrap
 
         @media all and (max-width: $breakpoint-phone)
+            margin-bottom: 0
             width: auto
 
     &_name

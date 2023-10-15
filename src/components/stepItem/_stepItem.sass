@@ -1,24 +1,23 @@
 $mainClass: '.gst-stepItem'
 
 #{$mainClass}
-    width: 33.332%
-    border: 22px solid $color-transparent
+    flex: 1 1 calc(32% - 20px)
+    max-width: 32%
 
     @media all and (max-width: $breakpoint-tablet)
-        border: 15px solid $color-transparent
 
     @media all and (max-width: $breakpoint-phone)
-        border: 0px
         margin-bottom: $spacer-30
+        max-width: 100%
         width: 100%
 
     &_inner
         background: $color-white
-        box-shadow: $box-shadow
         border-radius: 15px
-        width: 100%
+        box-shadow: $box-shadow
         height: 100%
         overflow: hidden
+        width: 100%
 
     &_imgSrc
         width: 100%
@@ -27,33 +26,32 @@ $mainClass: '.gst-stepItem'
         padding: $spacer-20
 
     &_topLine
-        display: flex
         align-items: center
+        display: flex
         margin-bottom: $spacer-15
 
     &_number
-        border: 1px solid $color-red
-        border-radius: 50%
-        margin-right: $spacer-10
-        display: flex
-        justify-content: center
         align-items: center
-        font-weight: $fw-extra-bold
-        font-size: 16px
+        border-radius: 50%
+        border: 1px solid $color-red
         color: $color-red
-        width: 35px
-        min-width: 35px
+        display: flex
+        font-size: 16px
+        font-weight: $fw-extra-bold
         height: 35px
+        justify-content: center
+        margin-right: $spacer-10
+        min-width: 35px
+        width: 35px
 
     &_title
-        font-weight: $fw-bold
         font-size: 16px
-        line-height: 18px
+        font-weight: $fw-bold
+        line-height: $lh-small
 
     &_text
-        font-weight: $fw-semi-bold
         font-size: 14px
-        line-height: 22px
+        font-weight: $fw-semi-bold
 
         a
             color: $color-red

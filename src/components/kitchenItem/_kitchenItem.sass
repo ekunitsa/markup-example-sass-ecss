@@ -1,12 +1,10 @@
 $mainClass: '.gst-kitchenItem'
 
 #{$mainClass}
-    width: 33.332%
-    border: 22px solid $color-transparent
+    flex: 1 1 calc(32% - 20px)
 
     @media all and (max-width: $breakpoint-tablet)
-        border: 15px solid $color-transparent
-        width: 50%
+        flex-basis: calc(50% - 8px)
 
     @media all and (max-width: $breakpoint-phone)
         border: 0px
@@ -16,17 +14,19 @@ $mainClass: '.gst-kitchenItem'
     &:last-child
         @media all and (max-width: $breakpoint-tablet)
             margin-right: auto
+            max-width: calc(50% - 8px)
 
         @media all and (max-width: $breakpoint-phone)
             margin-bottom: 0
+            max-width: 100%
 
     &_inner
         background: $color-white
-        box-shadow: $box-shadow
         border-radius: 15px
-        width: 100%
+        box-shadow: $box-shadow
         height: 100%
         overflow: hidden
+        width: 100%
 
     &_imgSrc
         width: 100%
@@ -37,37 +37,37 @@ $mainClass: '.gst-kitchenItem'
 
     &_btn
         background-color: $color-red
-        color: $color-white
-        font-weight: $fw-bold
-        font-size: 14px
         border-radius: 5px
-        padding: $spacer-20
+        border: 1px solid $color-red
+        color: $color-white
+        display: inline-block
+        font-size: 14px
+        font-weight: $fw-bold
+        max-width: 200px
+        padding: $spacer-15
+        text-align: center
         text-decoration: none
         white-space: nowrap
-        display: inline-block
         width: 100%
-        max-width: 200px
-        border: 1px solid $color-red
-        text-align: center
 
         &:hover
             background-color: $color-dark-red
 
     &_btnInvert
         background-color: $color-transparent
-        color: $color-black
-        border: 1px solid $color-red
-        font-weight: $fw-bold
-        font-size: 14px
         border-radius: 5px
-        padding: $spacer-20
+        border: 1px solid $color-red
+        color: $color-black
+        display: inline-block
+        font-size: 14px
+        font-weight: $fw-bold
+        margin-bottom: $spacer-15
+        max-width: 200px
+        padding: $spacer-15
+        text-align: center
         text-decoration: none
         white-space: nowrap
-        display: inline-block
         width: 100%
-        max-width: 200px
-        text-align: center
-        margin-bottom: $spacer-15
 
         &:hover
             background-color: $color-dark-red
@@ -77,34 +77,34 @@ $mainClass: '.gst-kitchenItem'
         margin-bottom: $spacer-15
 
     &_onelineCost
-        margin-top: $spacer-30
+        margin-bottom: $spacer-30
         white-space: nowrap
 
     &_name
-        font-size: 16px
-        line-height: 19px
         color: $color-gray
+        font-size: 16px
+        line-height: $lh-small
 
     &_value
-        font-weight: $fw-semi-bold
         font-size: 16px
-        line-height: 19px
+        font-weight: $fw-semi-bold
+        line-height: $lh-small
 
     &_priceOld
-        font-weight: $fw-semi-bold
         font-size: 16px
-        line-height: 19px
+        font-weight: $fw-semi-bold
+        line-height: $lh-small
         white-space: nowrap
 
         span
             text-decoration: line-through
 
     &_priceNew
-        white-space: nowrap
-        font-weight: $fw-bold
-        font-size: 20px
-        line-height: 23px
         color: $color-red
+        font-size: 20px
+        font-weight: $fw-bold
+        line-height: $lh-small
+        white-space: nowrap
 
     &_title
         br

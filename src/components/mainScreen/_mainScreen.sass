@@ -1,24 +1,24 @@
 $mainClass: '.gst-mainScreen'
 
 #{$mainClass}
-    background-repeat: no-repeat
     background-position: top center
-    background-size: 1920px 912px
-    min-height: 912px
+    background-repeat: no-repeat
+    background-size: 1920px 910px
+    min-height: 910px
     padding-top: 250px
 
     @media all and (max-width: $breakpoint-tablet)
-        padding-top: 200px
         background-position: top right -300px
         background-size: auto 730px
         min-height: 730px
+        padding-top: 200px
 
     @media all and (max-width: $breakpoint-phone)
-        min-height: 330px
-        padding-top: $spacer-40
-        padding-bottom: 0
-        background-size: auto 330px
         background-position: top right
+        background-size: auto 330px
+        min-height: 330px
+        padding-bottom: 0
+        padding-top: $spacer-40
         position: relative
 
     @media all and (max-width: 500px)
@@ -26,19 +26,19 @@ $mainClass: '.gst-mainScreen'
 
     &::before
          @media all and (max-width: $breakpoint-phone)
-            content: ''
             background: $gradient-white-horizontal
-            transform: matrix(-1, 0, 0, 1, 0, 0)
+            content: ''
             height: 100%
-            width: 100%
+            left: 0
             position: absolute
             top: 0
-            left: 0
+            transform: matrix(-1, 0, 0, 1, 0, 0)
+            width: 100%
 
     &_title
-        font-weight: $fw-extra-bold
         font-size: 60px
-        line-height: 115%
+        font-weight: $fw-extra-bold
+        line-height: $lh-small
         margin-top: 0
 
         @media all and (max-width: $breakpoint-tablet)
@@ -52,28 +52,28 @@ $mainClass: '.gst-mainScreen'
         display: block
 
     &_list
-        margin-top: $spacer-40
         margin-bottom: $spacer-75
+        margin-top: $spacer-40
 
         @media all and (max-width: $breakpoint-tablet)
-            margin-top: $spacer-30
             margin-bottom: $spacer-35
+            margin-top: $spacer-30
 
     &_oneItem
-        margin-bottom: $spacer-20
-        font-size: 22px
-        line-height: 137%
-        padding-left: $spacer-60
-        min-height: 33px
-        padding-top: 2px
-        background-repeat: no-repeat
         background-position: left center
+        background-repeat: no-repeat
+        font-size: 22px
+        line-height: $lh-medium
+        margin-bottom: $spacer-20
+        min-height: 33px
+        padding-left: $spacer-60
+        padding-top: 2px
 
         @media all and (max-width: $breakpoint-tablet)
             font-size: 18px
             margin-bottom: $spacer-20
-            padding-left: $spacer-50
             min-height: 29px
+            padding-left: $spacer-50
 
         @media all and (max-width: $breakpoint-phone)
             margin-bottom: $spacer-15
@@ -101,17 +101,17 @@ $mainClass: '.gst-mainScreen'
 
 #{$mainClass}
     &Second
+        align-items: center
+        display: flex
         margin-bottom: $spacer-100
         padding-top: 0
-        display: flex
-        align-items: center
 
         @media all and (max-width: $breakpoint-tablet)
             margin-bottom: $spacer-60
             padding-top: 0
 
         @media all and (max-width: $breakpoint-phone)
-            margin-bottom: $spacer-50
+            margin-bottom: $spacer-40
             padding-top: $spacer-35
 
 // webp/avif optimization
@@ -122,7 +122,7 @@ $mainClass: '.gst-mainScreen'
             background-image: url(../../img/mainScreen/main@2x.jpg)
 
 .webp
-    #{$mainClass}   
+    #{$mainClass}
         background-image: url(../../img/mainScreen/main.jpg?as=webp)
         @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), all and (min-width: 991px)
             background-image: url(../../img/mainScreen/main@2x.jpg?as=webp)

@@ -11,7 +11,7 @@ $mainClass: '.gst-header'
     z-index: 100
 
     @media all and (max-width: $breakpoint-phone)
-        min-height: 176px
+        min-height: 175px
         position: relative
 
     &_top
@@ -33,14 +33,13 @@ $mainClass: '.gst-header'
     &_desc
         font-size: 12px
         font-weight: $fw-semi-bold
-        line-height: 16px
+        line-height: $lh-medium
         margin-top: $spacer-10
         text-transform: uppercase
 
         @media all and (max-width: $breakpoint-tablet)
             font-size: 8px
             font-weight: $fw-semi-bold
-            line-height: 11px
 
         @media all and (max-width: $breakpoint-phone)
             margin-top: $spacer-05
@@ -48,18 +47,15 @@ $mainClass: '.gst-header'
     &_time
         font-size: 15px
         font-weight: $fw-semi-bold
-        line-height: 25px
         position: relative
 
         @media all and (max-width: $breakpoint-tablet)
             font-size: 10px
-            line-height: 18px
 
         @media all and (max-width: $breakpoint-phone)
             left: $spacer-15
-            line-height: 13px
             position: absolute
-            top: $spacer-80
+            top: 83px
 
             br:nth-child(2)
                 display: none
@@ -68,7 +64,6 @@ $mainClass: '.gst-header'
         background: url(../../img/header/point.svg) no-repeat 0 center
         font-size: 15px
         font-weight: $fw-semi-bold
-        line-height: 25px
         max-width: 230px
         min-height: 50px
         padding-left: $spacer-60
@@ -77,7 +72,6 @@ $mainClass: '.gst-header'
         @media all and (max-width: $breakpoint-tablet)
             background-size: 32px 32px
             font-size: 10px
-            line-height: 18px
             min-height: 32px
             padding-left: $spacer-45
 
@@ -86,7 +80,6 @@ $mainClass: '.gst-header'
             font-size: 9px
             font-weight: $fw-regular
             left: $spacer-15
-            line-height: 11px
             min-height: 19px
             padding-left: $spacer-30
             position: absolute
@@ -105,7 +98,6 @@ $mainClass: '.gst-header'
         @media all and (max-width: $breakpoint-tablet)
             font-size: 10px
             font-weight: $fw-bold
-            line-height: 1
             padding: $spacer-10 $spacer-15
 
         &:hover
@@ -118,24 +110,23 @@ $mainClass: '.gst-header'
             position: absolute
             right: $spacer-15
             top: $spacer-50
+            line-height: $lh-xs
 
     &_phone
         color: $color-black
         display: block
         font-size: 20px
         font-weight: $fw-semi-bold
-        line-height: 25px
+        line-height: $lh-medium
         margin-bottom: $spacer-05
         text-decoration: none
         white-space: nowrap
 
         @media all and (max-width: $breakpoint-tablet)
             font-size: 18px
-            line-height: 25px
 
         @media all and (max-width: $breakpoint-phone)
             font-size: 14px
-            line-height: 1
             margin-bottom: $spacer-05
 
         &:hover
@@ -145,14 +136,12 @@ $mainClass: '.gst-header'
         color: $color-red
         font-size: 14px
         font-weight: $fw-semi-bold
-        line-height: 25px
 
         @media all and (max-width: $breakpoint-tablet)
             font-size: 12px
 
         @media all and (max-width: $breakpoint-phone)
             font-size: 12px
-            line-height: 1
 
         &:hover
             text-decoration: none
