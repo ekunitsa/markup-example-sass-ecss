@@ -6,7 +6,7 @@ if (process.env.NODE_ENV == 'development') {
 // Global style file
 import '../sass/style.sass';
 
-// Itils
+// Utils
 import 'jquery-mask-plugin';
 import './utils/avif-webp';
 
